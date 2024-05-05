@@ -1,0 +1,41 @@
+<%- include('./partials/header.ejs') %>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .px-5 {
+        max-width: 500px;
+        margin: auto;
+        padding: 15px;
+    }
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    p {
+        text-align: center;
+        color: #666;
+    }
+    .home-button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin: 20px 0;
+        border: none;
+        color: white;
+        background-color: #007BFF;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+        text-align: center;
+    }
+    .home-button:hover {
+        background-color: #0056b3;
+    }
+</style>
+<div class="px-5">
+    <h1>Home Page</h1>
+    <p>Welcome to our website! Feel free to browse around and learn more about us.</p>
+    <button class="home-button">Learn More</button>
+</div>
+<%- include('./partials/footer.ejs') %>

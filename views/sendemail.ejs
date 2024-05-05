@@ -1,0 +1,50 @@
+<%- include('./partials/header.ejs') %>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .px-5 {
+        max-width: 500px;
+        margin: auto;
+        padding: 10px;
+    }
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    input[type="email"], input[type="text"] {
+        margin: 5px 0;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    input[type="submit"] {
+        margin: 20px 0;
+        padding: 10px;
+        border: none;
+        color: white;
+        background-color: #007BFF;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+</style>
+<div class="px-5">
+    <h1>Email Sender</h1>
+    <form action="/sendemail" method="post">
+        <input type="email" name="semail" placeholder="sender email" /><br />
+        <input type="email" name="remail" placeholder="reciever email" /><br />
+        <input type="text" name="subject" placeholder="subject" /> <br />
+        <input type="text" name="message" placeholder="message" /> <br />
+        <input type="submit" value="Send" />
+    </form>
+</div>
+<%- include('./partials/footer.ejs') %>

@@ -1,0 +1,48 @@
+<%- include('./partials/header.ejs') %>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .px-5 {
+        max-width: 500px;
+        margin: auto;
+        padding: 15px;
+    }
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    input[type="email"], input[type="password"] {
+        margin: 10px 0;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    input[type="submit"] {
+        margin: 20px 0;
+        padding: 10px;
+        border: none;
+        color: white;
+        background-color: #007BFF;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+</style>
+<div class="px-5">
+    <h1>Login</h1>
+    <form action="/login" method="post">
+        <input type="email" name="email" placeholder="enter email" /><br />
+        <input type="password" name="password" placeholder="enter password" /><br />
+        <input type="submit" value="Login" />
+    </form>
+</div>
+<%- include('./partials/footer.ejs') %>
